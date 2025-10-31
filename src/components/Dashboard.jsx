@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { FiEdit } from "react-icons/fi";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import { SquarePen } from 'lucide-react';
+import { Trash2 } from 'lucide-react';
+
 import Swal from "sweetalert2";
 import Cookies from "js-cookie";
 
@@ -423,7 +424,7 @@ const Dashboard = () => {
                         }`}
                         disabled={s.admin?.id.toString() !== adminId}
                       >
-                        <FiEdit />
+                        <SquarePen />
                       </button>
 
                       {/* Delete Icon */}
@@ -436,7 +437,7 @@ const Dashboard = () => {
                         }`}
                         disabled={s.admin?.id.toString() !== adminId}
                       >
-                        <RiDeleteBin6Line />
+                        <Trash2 />
                       </button>
                     </td>
                   </tr>
